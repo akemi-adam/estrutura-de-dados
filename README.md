@@ -4,4 +4,4 @@ Repositório para documentar exercícios e códigos da disciplina de Estrutura d
 # Estrutura
 O repositório está separado por algoritmos de busca, ordenação e genéricos (exponenciação, primaridade, etc).
 
-O prefixo `i_` no nome de um arquivo indica que essa é a sua resolução interativa. Já o prefixo `r_` diz respeito a solução recursiva.
+O prefixo `i_` no nome de uma função indica que essa é a sua resolução interativa. Já o prefixo `r_` diz respeito a solução recursiva.
