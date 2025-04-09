@@ -1,4 +1,4 @@
-#include "search.h"
+#include "./search.h"
 
 
 int i_linear_search(int* array, int length, int target)
