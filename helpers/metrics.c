@@ -1,5 +1,6 @@
 #include "metrics.h"
 #include <time.h>
+#include <stdio.h>
 
 void exec_action(void (*action)()) {
     struct timespec a, b;
