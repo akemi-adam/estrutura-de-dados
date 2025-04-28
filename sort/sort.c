@@ -19,3 +19,23 @@ void i_selection_sort(int* v, int n) {
         v[s] = temp;
     }
 }
+
+/**
+ * Implementação do Insertion Sort
+ * 
+ * @param int* v: Vetor a ser ordenado
+ * @param int n: Tamanho do vetor
+ * 
+ * @return void
+ */
+void i_insertion_sort(int* v, int n) {
+    for (unsigned int i = 1; i < n; i++) {
+        int j = i - 1;
+        while (j >= 0 && v[j] > v[j + 1]) {
+            int temp = v[j + 1];
+            v[j + 1] = v[j];
+            v[j] = temp;
+            j--;
+        }
+    }
+}
