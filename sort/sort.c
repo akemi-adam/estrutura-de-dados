@@ -1,4 +1,5 @@
 #include "./sort.h"
+#include "./../helpers/helpers.h"
 
 /**
  * Implementação do Selection Sort
@@ -14,9 +15,7 @@ void i_selection_sort(int* v, int n) {
         for (unsigned int j = i + 1; j < n; j++) {
             if (v[s] > v[j]) s = j;
         }
-        int temp = v[i];
-        v[i] = v[s];
-        v[s] = temp;
+        int_swap(v, i, s);
     }
 }
 
@@ -32,9 +31,7 @@ void i_insertion_sort(int* v, int n) {
     for (unsigned int i = 1; i < n; i++) {
         int j = i - 1;
         while (j >= 0 && v[j] > v[j + 1]) {
-            int temp = v[j + 1];
-            v[j + 1] = v[j];
-            v[j] = temp;
+            int_swap(v, j + 1, j);
             j--;
         }
     }
