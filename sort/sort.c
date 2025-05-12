@@ -36,3 +36,12 @@ void i_insertion_sort(int* v, int n) {
         }
     }
 }
+
+void r_merge_sort(int* v, int s, int e) {
+    if (s < e) {
+        int m = (e + s) / 2;
+        r_merge_sort(v, s, m);
+        r_merge_sort(v, m + 1, e);
+        merge(v, s, m, e);
+    }
+}
