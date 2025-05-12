@@ -54,3 +54,6 @@ dkms.conf
 test.c
 test
 .vscode
+
+*/__pycache__
+main.py
