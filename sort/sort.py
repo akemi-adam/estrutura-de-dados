@@ -28,3 +28,25 @@ def i_selection_sort(v: list) -> None:
         swap(v, i, s)
 
 
+def merge(v: list, s: int, m: int, e: int):
+    w: list = []
+    i: int = s
+    j: int = m + 1
+    length: int = e - s + 1
+    for k in range(length):
+        if j > e or (i <= m and v[i] < v[j]):
+            w.append(v[i])
+            i += 1
+        else:
+            w.append(v[j])
+            j += 1
+    for k in range(length):
+        v[s + k] = w[k]
+
+
+def r_merge_sort(v: list, s: int, e: int):
+    if s < e:
+        m: int = (s + e) // 2
+        r_merge_sort(v, s, m)
+        r_merge_sort(v, m + 1, e)
+        merge(v, s, m, e)
