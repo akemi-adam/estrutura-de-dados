@@ -10,3 +10,13 @@ def i_insertion_sort(v: list) -> None:
             j -= 1
 
                 
+def i_bubble_sort(v: list) -> None:
+    sorted: bool = False
+    while not sorted:
+        sorted = True
+        for i in range(len(v) - 1):
+            if v[i] > v[i + 1]:
+                swap(v, i, i + 1)
+                sorted = False
+                
+
