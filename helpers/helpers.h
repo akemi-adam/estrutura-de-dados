@@ -4,4 +4,6 @@
 
 void int_swap(int*, int, int);
 
+void merge(int*, int, int, int);
+
 #endif
