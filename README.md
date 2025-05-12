@@ -10,4 +10,5 @@ O prefixo `i_` no nome de uma função indica que essa é a sua resolução inte
 
 |Data|Atualização|
 |-|-|
-|22/04/2025|Remoção do módulo helpers, por conta do uso impreciso da função exec_action. Para usar ela, era preciso passar uma função anônima que chamava a função a ser analisada, mas isso acabava interferindo na medição do tempo da função alvo|
+|22/04/2025|Remoção da função exec_action, por conta do uso impreciso da função exec_action. Para usar ela, era preciso passar uma função anônima que chamava a função a ser analisada, mas isso acabava interferindo na medição do tempo da função alvo|
+|12/05/2025|Implementações em Python das funções de ordenação|
