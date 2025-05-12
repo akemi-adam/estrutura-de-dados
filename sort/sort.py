@@ -20,3 +20,11 @@ def i_bubble_sort(v: list) -> None:
                 sorted = False
                 
 
+def i_selection_sort(v: list) -> None:
+    for i in range(len(v) - 1):
+        s: int = i
+        for j in range(i + 1, len(v)):
+            if v[s] > v[j]: s = j
+        swap(v, i, s)
+
+
