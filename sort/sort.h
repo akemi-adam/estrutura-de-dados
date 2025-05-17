@@ -7,4 +7,6 @@ void i_insertion_sort(int*, int);
 
 void r_merge_sort(int*, int, int);
 
+void i_distribution_sort(int*, int);
+
 #endif
