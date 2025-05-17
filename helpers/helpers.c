@@ -48,3 +48,10 @@ int min(int* v, int n) {
         if (number > v[i]) number = v[i];
     return number;
 }
+
+int max(int* v, int n) {
+    int number = v[0];
+    for (unsigned int i = 1; i < n; i++)
+        if (number < v[i]) number = v[i];
+    return number;
+}
