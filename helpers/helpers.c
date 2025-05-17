@@ -41,3 +41,10 @@ void merge(int* v, int s, int m, int e) {
 
     for (unsigned int k = 0; k < len; k++) v[s + k] = w[k];
 }
+
+int min(int* v, int n) {
+    int number = v[0];
+    for (unsigned int i = 1; i < n; i++)
+        if (number > v[i]) number = v[i];
+    return number;
+}
