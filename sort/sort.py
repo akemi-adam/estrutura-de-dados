@@ -32,3 +32,27 @@ def r_merge_sort(v: list, s: int, e: int):
         r_merge_sort(v, s, m)
         r_merge_sort(v, m + 1, e)
         merge(v, s, m, e)
+
+
+def i_distribution_sort(v: list):
+    n = len(v)
+    v_min = min(v)
+    v_max = max(v)
+    
+    k = v_max - v_min + 1
+    c = [0 for _ in range(k)]
+    w = [0 for _ in range(n)]
+
+    for i in range(n):
+        j = v[i] - v_min
+        c[j] += 1
+
+    for i in range(1, k): c[i] += c[i - 1]
+
+    for i in range(n):
+        j = v[i] - v_min
+        c[j] -= 1
+        p = c[j]
+        w[p] = v[i]
+
+    for i in range(n): v[i] = w[i]
