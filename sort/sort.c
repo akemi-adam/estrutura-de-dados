@@ -45,3 +45,33 @@ void r_merge_sort(int* v, int s, int e) {
         merge(v, s, m, e);
     }
 }
+
+/**
+ * Implementação do distribution sort iterativa
+ * 
+ * @param int* v: Array a ser ordenado
+ * @param int n: Tamanho do array
+ * 
+ * @return void
+ */
+void i_distribution_sort(int* v, int n) {
+    int v_min = min(v, n),
+        v_max = max(v, n),
+        k = v_max - v_min + 1,
+        c[k], w[n];
+
+    zeros(c, n);
+
+    for (int i = 0; i < n; i++) c[v[i] - v_min]++;
+
+    for (int i = 1; i < k; i++) c[i] += c[i - 1];
+
+    for (int i = 0; i < n; i++) {
+        int j = v[i] - v_min;
+        w[c[j] - 1] = v[i];
+        c[j]--;
+    }
+
+    for (int i = 0; i < n; i++) v[i] = w[i];
+}
+
