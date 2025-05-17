@@ -55,3 +55,7 @@ int max(int* v, int n) {
         if (number < v[i]) number = v[i];
     return number;
 }
+
+void zeros(int* v, int n) {
+    for (unsigned int i = 0; i < n; i++) v[i] = 0;
+}
