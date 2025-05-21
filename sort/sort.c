@@ -37,6 +37,15 @@ void i_insertion_sort(int* v, int n) {
     }
 }
 
+/**
+ * Implementação do merge sort recursiva
+ * 
+ * @param int* v: Array a ser ordenado
+ * @param int s: Índice de início
+ * @param int e: Índice de limite 
+ * 
+ * @return void
+ */
 void r_merge_sort(int* v, int s, int e) {
     if (s < e) {
         int m = (e + s) / 2;
