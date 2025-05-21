@@ -12,4 +12,6 @@ int max(int*, int);
 
 void zeros(int*, int);
 
+int partition(int*, int, int);
+
 #endif
