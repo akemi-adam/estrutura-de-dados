@@ -59,3 +59,16 @@ int max(int* v, int n) {
 void zeros(int* v, int n) {
     for (unsigned int i = 0; i < n; i++) v[i] = 0;
 }
+
+int partition(int* v, int s, int e) {
+    unsigned int p = s - 1;
+    for (unsigned int i = s; i < e; i++) {
+        if (v[i] <= v[e]) {
+            p++;
+            int_swap(v, i, p);
+        }
+    }
+    p++;
+    int_swap(v, p, e);
+    return p;
+}
