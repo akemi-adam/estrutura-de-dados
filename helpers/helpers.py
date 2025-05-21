@@ -16,3 +16,14 @@ def merge(v: list, s: int, m: int, e: int):
             j += 1
     for k in range(length):
         v[s + k] = w[k]
+        
+
+def partition(v: list, s, e):
+    p: int = s - 1
+    for i in range(s, e):
+        if v[i] <= v[e]:
+            p += 1
+            swap(v, i, p)
+    p += 1
+    swap(v, p, e)
+    return p
