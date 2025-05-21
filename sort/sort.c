@@ -84,3 +84,19 @@ void i_distribution_sort(int* v, int n) {
     for (int i = 0; i < n; i++) v[i] = w[i];
 }
 
+/**
+ * Implementação do quick sort recursiva
+ * 
+ * @param int* v: Array a ser ordenado
+ * @param int s: Índice de início
+ * @param int e: Índice de limite 
+ * 
+ * @return void
+ */
+void r_quick_sort(int* v, int s, int e) {
+    if (s < e) {
+        unsigned int p = partition(v, s, e);
+        r_quick_sort(v, s, p - 1);
+        r_quick_sort(v, p + 1, e);
+    }
+}
