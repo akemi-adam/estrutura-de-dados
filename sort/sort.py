@@ -56,3 +56,11 @@ def i_distribution_sort(v: list):
         w[p] = v[i]
 
     for i in range(n): v[i] = w[i]
+    
+    
+def r_quick_sort(v, s, e):
+    if s < e:
+        p: int = partition(v, s, e)
+        print(v)
+        r_quick_sort(v, s, p - 1)
+        r_quick_sort(v, p + 1, e)
