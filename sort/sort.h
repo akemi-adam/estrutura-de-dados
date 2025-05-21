@@ -9,4 +9,6 @@ void r_merge_sort(int*, int, int);
 
 void i_distribution_sort(int*, int);
 
+void r_quick_sort(int*, int, int);
+
 #endif
